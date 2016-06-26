@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GGBubbleSort.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>GGBubbleSortLib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>GGSortCode.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,21 @@
 			<true/>
 		</dict>
 		<key>A16CCC8C1D1FB91E009E0E73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A16CCCA31D1FB9BB009E0E73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A16CCCAC1D1FB9BB009E0E73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A16CCCC51D1FB9F7009E0E73</key>
 		<dict>
 			<key>primary</key>
 			<true/>

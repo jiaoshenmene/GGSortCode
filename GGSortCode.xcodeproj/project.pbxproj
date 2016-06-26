@@ -15,6 +15,14 @@
 		A16CCC7C1D1FB91E009E0E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16CCC7A1D1FB91E009E0E73 /* LaunchScreen.storyboard */; };
 		A16CCC871D1FB91E009E0E73 /* GGSortCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCC861D1FB91E009E0E73 /* GGSortCodeTests.m */; };
 		A16CCC921D1FB91E009E0E73 /* GGSortCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCC911D1FB91E009E0E73 /* GGSortCodeUITests.m */; };
+		A16CCCA71D1FB9BB009E0E73 /* GGBubbleSort.h in Headers */ = {isa = PBXBuildFile; fileRef = A16CCCA61D1FB9BB009E0E73 /* GGBubbleSort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A16CCCAE1D1FB9BB009E0E73 /* GGBubbleSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */; };
+		A16CCCB51D1FB9BB009E0E73 /* GGBubbleSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCB41D1FB9BB009E0E73 /* GGBubbleSortTests.m */; };
+		A16CCCB91D1FB9BB009E0E73 /* GGBubbleSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */; };
+		A16CCCBA1D1FB9BB009E0E73 /* GGBubbleSort.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A16CCCC91D1FB9F7009E0E73 /* GGBubbleSortLib.h in Headers */ = {isa = PBXBuildFile; fileRef = A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */; };
+		A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */; };
+		A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +40,51 @@
 			remoteGlobalIDString = A16CCC681D1FB91E009E0E73;
 			remoteInfo = GGSortCode;
 		};
+		A16CCCAF1D1FB9BB009E0E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16CCC611D1FB91E009E0E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16CCCA31D1FB9BB009E0E73;
+			remoteInfo = GGBubbleSort;
+		};
+		A16CCCB11D1FB9BB009E0E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16CCC611D1FB91E009E0E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16CCC681D1FB91E009E0E73;
+			remoteInfo = GGSortCode;
+		};
+		A16CCCB71D1FB9BB009E0E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16CCC611D1FB91E009E0E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16CCCA31D1FB9BB009E0E73;
+			remoteInfo = GGBubbleSort;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A16CCCBE1D1FB9BB009E0E73 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A16CCCBA1D1FB9BB009E0E73 /* GGBubbleSort.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCC41D1FB9F7009E0E73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A16CCC691D1FB91E009E0E73 /* GGSortCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGSortCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +103,15 @@
 		A16CCC8D1D1FB91E009E0E73 /* GGSortCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGSortCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16CCC911D1FB91E009E0E73 /* GGSortCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGSortCodeUITests.m; sourceTree = "<group>"; };
 		A16CCC931D1FB91E009E0E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GGBubbleSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16CCCA61D1FB9BB009E0E73 /* GGBubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGBubbleSort.h; sourceTree = "<group>"; };
+		A16CCCA81D1FB9BB009E0E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16CCCAD1D1FB9BB009E0E73 /* GGBubbleSortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGBubbleSortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16CCCB41D1FB9BB009E0E73 /* GGBubbleSortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGBubbleSortTests.m; sourceTree = "<group>"; };
+		A16CCCB61D1FB9BB009E0E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16CCCC61D1FB9F7009E0E73 /* libGGBubbleSortLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGGBubbleSortLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGBubbleSortLib.h; sourceTree = "<group>"; };
+		A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGBubbleSortLib.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16CCCB91D1FB9BB009E0E73 /* GGBubbleSort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +137,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A16CCCA01D1FB9BB009E0E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCAA1D1FB9BB009E0E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16CCCAE1D1FB9BB009E0E73 /* GGBubbleSort.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCC31D1FB9F7009E0E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +168,9 @@
 				A16CCC6B1D1FB91E009E0E73 /* GGSortCode */,
 				A16CCC851D1FB91E009E0E73 /* GGSortCodeTests */,
 				A16CCC901D1FB91E009E0E73 /* GGSortCodeUITests */,
+				A16CCCA51D1FB9BB009E0E73 /* GGBubbleSort */,
+				A16CCCB31D1FB9BB009E0E73 /* GGBubbleSortTests */,
+				A16CCCC71D1FB9F7009E0E73 /* GGBubbleSortLib */,
 				A16CCC6A1D1FB91E009E0E73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +181,9 @@
 				A16CCC691D1FB91E009E0E73 /* GGSortCode.app */,
 				A16CCC821D1FB91E009E0E73 /* GGSortCodeTests.xctest */,
 				A16CCC8D1D1FB91E009E0E73 /* GGSortCodeUITests.xctest */,
+				A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */,
+				A16CCCAD1D1FB9BB009E0E73 /* GGBubbleSortTests.xctest */,
+				A16CCCC61D1FB9F7009E0E73 /* libGGBubbleSortLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,7 +230,46 @@
 			path = GGSortCodeUITests;
 			sourceTree = "<group>";
 		};
+		A16CCCA51D1FB9BB009E0E73 /* GGBubbleSort */ = {
+			isa = PBXGroup;
+			children = (
+				A16CCCA61D1FB9BB009E0E73 /* GGBubbleSort.h */,
+				A16CCCA81D1FB9BB009E0E73 /* Info.plist */,
+			);
+			path = GGBubbleSort;
+			sourceTree = "<group>";
+		};
+		A16CCCB31D1FB9BB009E0E73 /* GGBubbleSortTests */ = {
+			isa = PBXGroup;
+			children = (
+				A16CCCB41D1FB9BB009E0E73 /* GGBubbleSortTests.m */,
+				A16CCCB61D1FB9BB009E0E73 /* Info.plist */,
+			);
+			path = GGBubbleSortTests;
+			sourceTree = "<group>";
+		};
+		A16CCCC71D1FB9F7009E0E73 /* GGBubbleSortLib */ = {
+			isa = PBXGroup;
+			children = (
+				A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */,
+				A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */,
+			);
+			path = GGBubbleSortLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A16CCCA11D1FB9BB009E0E73 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16CCCC91D1FB9F7009E0E73 /* GGBubbleSortLib.h in Headers */,
+				A16CCCA71D1FB9BB009E0E73 /* GGBubbleSort.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A16CCC681D1FB91E009E0E73 /* GGSortCode */ = {
@@ -150,10 +279,12 @@
 				A16CCC651D1FB91E009E0E73 /* Sources */,
 				A16CCC661D1FB91E009E0E73 /* Frameworks */,
 				A16CCC671D1FB91E009E0E73 /* Resources */,
+				A16CCCBE1D1FB9BB009E0E73 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A16CCCB81D1FB9BB009E0E73 /* PBXTargetDependency */,
 			);
 			name = GGSortCode;
 			productName = GGSortCode;
@@ -196,6 +327,60 @@
 			productReference = A16CCC8D1D1FB91E009E0E73 /* GGSortCodeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A16CCCA31D1FB9BB009E0E73 /* GGBubbleSort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16CCCBB1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSort" */;
+			buildPhases = (
+				A16CCC9F1D1FB9BB009E0E73 /* Sources */,
+				A16CCCA01D1FB9BB009E0E73 /* Frameworks */,
+				A16CCCA11D1FB9BB009E0E73 /* Headers */,
+				A16CCCA21D1FB9BB009E0E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GGBubbleSort;
+			productName = GGBubbleSort;
+			productReference = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A16CCCAC1D1FB9BB009E0E73 /* GGBubbleSortTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16CCCBF1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortTests" */;
+			buildPhases = (
+				A16CCCA91D1FB9BB009E0E73 /* Sources */,
+				A16CCCAA1D1FB9BB009E0E73 /* Frameworks */,
+				A16CCCAB1D1FB9BB009E0E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A16CCCB01D1FB9BB009E0E73 /* PBXTargetDependency */,
+				A16CCCB21D1FB9BB009E0E73 /* PBXTargetDependency */,
+			);
+			name = GGBubbleSortTests;
+			productName = GGBubbleSortTests;
+			productReference = A16CCCAD1D1FB9BB009E0E73 /* GGBubbleSortTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A16CCCC51D1FB9F7009E0E73 /* GGBubbleSortLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16CCCCC1D1FB9F7009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortLib" */;
+			buildPhases = (
+				A16CCCC21D1FB9F7009E0E73 /* Sources */,
+				A16CCCC31D1FB9F7009E0E73 /* Frameworks */,
+				A16CCCC41D1FB9F7009E0E73 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GGBubbleSortLib;
+			productName = GGBubbleSortLib;
+			productReference = A16CCCC61D1FB9F7009E0E73 /* libGGBubbleSortLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +404,19 @@
 						DevelopmentTeam = WRM5754N86;
 						TestTargetID = A16CCC681D1FB91E009E0E73;
 					};
+					A16CCCA31D1FB9BB009E0E73 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WRM5754N86;
+					};
+					A16CCCAC1D1FB9BB009E0E73 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WRM5754N86;
+						TestTargetID = A16CCC681D1FB91E009E0E73;
+					};
+					A16CCCC51D1FB9F7009E0E73 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WRM5754N86;
+					};
 				};
 			};
 			buildConfigurationList = A16CCC641D1FB91E009E0E73 /* Build configuration list for PBXProject "GGSortCode" */;
@@ -237,6 +435,9 @@
 				A16CCC681D1FB91E009E0E73 /* GGSortCode */,
 				A16CCC811D1FB91E009E0E73 /* GGSortCodeTests */,
 				A16CCC8C1D1FB91E009E0E73 /* GGSortCodeUITests */,
+				A16CCCA31D1FB9BB009E0E73 /* GGBubbleSort */,
+				A16CCCAC1D1FB9BB009E0E73 /* GGBubbleSortTests */,
+				A16CCCC51D1FB9F7009E0E73 /* GGBubbleSortLib */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +467,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A16CCCA21D1FB9BB009E0E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCAB1D1FB9BB009E0E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16CCC741D1FB91E009E0E73 /* ViewController.m in Sources */,
+				A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.m in Sources */,
 				A16CCC711D1FB91E009E0E73 /* AppDelegate.m in Sources */,
 				A16CCC6E1D1FB91E009E0E73 /* main.m in Sources */,
 			);
@@ -295,6 +511,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A16CCC9F1D1FB9BB009E0E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCA91D1FB9BB009E0E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16CCCB51D1FB9BB009E0E73 /* GGBubbleSortTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16CCCC21D1FB9F7009E0E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -307,6 +546,21 @@
 			isa = PBXTargetDependency;
 			target = A16CCC681D1FB91E009E0E73 /* GGSortCode */;
 			targetProxy = A16CCC8E1D1FB91E009E0E73 /* PBXContainerItemProxy */;
+		};
+		A16CCCB01D1FB9BB009E0E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16CCCA31D1FB9BB009E0E73 /* GGBubbleSort */;
+			targetProxy = A16CCCAF1D1FB9BB009E0E73 /* PBXContainerItemProxy */;
+		};
+		A16CCCB21D1FB9BB009E0E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16CCC681D1FB91E009E0E73 /* GGSortCode */;
+			targetProxy = A16CCCB11D1FB9BB009E0E73 /* PBXContainerItemProxy */;
+		};
+		A16CCCB81D1FB9BB009E0E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16CCCA31D1FB9BB009E0E73 /* GGBubbleSort */;
+			targetProxy = A16CCCB71D1FB9BB009E0E73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -482,6 +736,84 @@
 			};
 			name = Release;
 		};
+		A16CCCBC1D1FB9BB009E0E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GGBubbleSort/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGBubbleSort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A16CCCBD1D1FB9BB009E0E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GGBubbleSort/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGBubbleSort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A16CCCC01D1FB9BB009E0E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GGBubbleSortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGBubbleSortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GGSortCode.app/GGSortCode";
+			};
+			name = Debug;
+		};
+		A16CCCC11D1FB9BB009E0E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GGBubbleSortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGBubbleSortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GGSortCode.app/GGSortCode";
+			};
+			name = Release;
+		};
+		A16CCCCD1D1FB9F7009E0E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A16CCCCE1D1FB9F7009E0E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -515,6 +847,30 @@
 			buildConfigurations = (
 				A16CCC9D1D1FB91E009E0E73 /* Debug */,
 				A16CCC9E1D1FB91E009E0E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A16CCCBB1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16CCCBC1D1FB9BB009E0E73 /* Debug */,
+				A16CCCBD1D1FB9BB009E0E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A16CCCBF1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16CCCC01D1FB9BB009E0E73 /* Debug */,
+				A16CCCC11D1FB9BB009E0E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A16CCCCC1D1FB9F7009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16CCCCD1D1FB9F7009E0E73 /* Debug */,
+				A16CCCCE1D1FB9F7009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

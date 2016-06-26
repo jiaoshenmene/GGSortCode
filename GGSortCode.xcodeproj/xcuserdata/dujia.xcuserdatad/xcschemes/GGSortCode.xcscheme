@@ -48,6 +48,16 @@
                ReferencedContainer = "container:GGSortCode.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A16CCCAC1D1FB9BB009E0E73"
+               BuildableName = "GGBubbleSortTests.xctest"
+               BlueprintName = "GGBubbleSortTests"
+               ReferencedContainer = "container:GGSortCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
