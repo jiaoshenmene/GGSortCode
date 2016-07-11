@@ -21,8 +21,8 @@
 		A16CCCB91D1FB9BB009E0E73 /* GGBubbleSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */; };
 		A16CCCBA1D1FB9BB009E0E73 /* GGBubbleSort.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A16CCCA41D1FB9BB009E0E73 /* GGBubbleSort.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A16CCCC91D1FB9F7009E0E73 /* GGBubbleSortLib.h in Headers */ = {isa = PBXBuildFile; fileRef = A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */; };
-		A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */; };
-		A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */; };
+		A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.mm */; };
+		A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +111,7 @@
 		A16CCCB61D1FB9BB009E0E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16CCCC61D1FB9F7009E0E73 /* libGGBubbleSortLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGGBubbleSortLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGBubbleSortLib.h; sourceTree = "<group>"; };
-		A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGBubbleSortLib.m; sourceTree = "<group>"; };
+		A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GGBubbleSortLib.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				A16CCCC81D1FB9F7009E0E73 /* GGBubbleSortLib.h */,
-				A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.m */,
+				A16CCCCA1D1FB9F7009E0E73 /* GGBubbleSortLib.mm */,
 			);
 			path = GGBubbleSortLib;
 			sourceTree = "<group>";
@@ -489,7 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16CCC741D1FB91E009E0E73 /* ViewController.m in Sources */,
-				A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.m in Sources */,
+				A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.mm in Sources */,
 				A16CCC711D1FB91E009E0E73 /* AppDelegate.m in Sources */,
 				A16CCC6E1D1FB91E009E0E73 /* main.m in Sources */,
 			);
@@ -530,7 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.m in Sources */,
+				A16CCCCB1D1FB9F7009E0E73 /* GGBubbleSortLib.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +833,7 @@
 				A16CCC981D1FB91E009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16CCC991D1FB91E009E0E73 /* Build configuration list for PBXNativeTarget "GGSortCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -841,6 +842,7 @@
 				A16CCC9B1D1FB91E009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16CCC9C1D1FB91E009E0E73 /* Build configuration list for PBXNativeTarget "GGSortCodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -849,6 +851,7 @@
 				A16CCC9E1D1FB91E009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16CCCBB1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSort" */ = {
 			isa = XCConfigurationList;
@@ -857,6 +860,7 @@
 				A16CCCBD1D1FB9BB009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16CCCBF1D1FB9BB009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortTests" */ = {
 			isa = XCConfigurationList;
@@ -865,6 +869,7 @@
 				A16CCCC11D1FB9BB009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16CCCCC1D1FB9F7009E0E73 /* Build configuration list for PBXNativeTarget "GGBubbleSortLib" */ = {
 			isa = XCConfigurationList;
@@ -873,6 +878,7 @@
 				A16CCCCE1D1FB9F7009E0E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
