@@ -11,9 +11,9 @@
 @implementation GGBubbleSortLib
 + (void)startTest
 {
-    int arr[] = {25,24,15,4,67};
-    BubbleSort2(arr, 5);
-    for (int i = 0; i < 5; i++) {
+    int arr[] = {25,24,15,4,3,2};
+    InsertionSort(arr, 6);
+    for (int i = 0; i < 6; i++) {
         NSLog(@"%d",arr[i]);
     }
 }
@@ -42,12 +42,11 @@ void swap3(int &left , int &right)
 }
 
 
-
-void BubbleSort1(int arr[], int num)
+void BubbleSort1(int arr[] , int num)
 {
     int i , j;
     for (i = 0; i < num; i++) {
-        for (j = 1; j < num - 1; j++) {
+        for (j = 1; j < num; j++) {
             if (arr[j - 1] > arr[j]) {
                 swap1(&arr[j - 1], &arr[j]);
             }
@@ -55,22 +54,75 @@ void BubbleSort1(int arr[], int num)
     }
 }
 
-void BubbleSort2(int arr[] , int num)
+void BubbleSort2(int arr[] ,int num)
 {
     int k = num;
-    int j;
+    int j = 0;
     bool flag = true;
+    int count = 1;
     while (flag) {
         flag = false;
-        for (j = 1; j < k; j++) {
+        for (j = 1; j < k ; j++) {
             if (arr[j - 1] > arr[j]) {
                 swap1(&arr[j - 1], &arr[j]);
                 flag = true;
             }
+            count++;
         }
         k--;
     }
+    NSLog(@"%d",count);
 }
+
+void BubbleSort3(int arr[] , int num)
+{
+    int k , j;
+    int flag = num;
+    int count = 1;
+    while (flag ) {
+        k = flag;
+        flag = 0;
+        for (j = 1; j < k; j++) {
+            if (arr[j - 1] > arr[j]) {
+                swap1(&arr[j - 1], &arr[j]);
+                flag = j;
+            }
+            count++;
+        }
+    }
+    NSLog(@"%d",count);
+}
+
+void InsertionSort(int arr[] , int num)
+{
+    int i , j;
+    int temp;
+    for (i = 1; i < num; i++) {
+        temp = arr[i];
+        for (j = i; j > 0 && arr[j - 1] > temp; j--) {
+            arr[j] = arr[j - 1];
+        }
+        arr[j] = temp;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
