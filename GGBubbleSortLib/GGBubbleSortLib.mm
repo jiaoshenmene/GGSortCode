@@ -12,7 +12,7 @@
 + (void)startTest
 {
     int arr[] = {25,24,15,4,3,2};
-    InsertionSort(arr, 6);
+    ShellSort(arr, 6);
     for (int i = 0; i < 6; i++) {
         NSLog(@"%d",arr[i]);
     }
@@ -96,19 +96,34 @@ void BubbleSort3(int arr[] , int num)
 void InsertionSort(int arr[] , int num)
 {
     int i , j;
-    int temp;
+    int tmp;
+    
     for (i = 1; i < num; i++) {
-        temp = arr[i];
-        for (j = i; j > 0 && arr[j - 1] > temp; j--) {
-            arr[j] = arr[j - 1];
+        tmp = arr[i];
+        for (j = i; j > 0 && arr[j -1] > tmp; j--) {
+            arr[j] = arr[j -1];
         }
-        arr[j] = temp;
+        arr[j] = tmp;
     }
 }
 
-
-
-
+void ShellSort(int *arr , int num)
+{
+    int i , j ,k , tmp;
+    for (k = num / 2; k > 0; k /= 2) {
+        for (i = k; i < num; i++) {
+            tmp = arr[i];
+            for (j = i; j >= k; j -= k) {
+                if (arr[j - k] > tmp) {
+                    arr[j] = arr[j - k];
+                }else{
+                    break;
+                }
+            }
+            arr[j] = tmp;
+        }
+    }
+}
 
 
 
