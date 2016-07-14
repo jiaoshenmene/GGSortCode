@@ -107,28 +107,36 @@ void InsertionSort(int arr[] , int num)
     }
 }
 
-void ShellSort(int *arr , int num)
+void ShellSort(int arr[] , int num)
 {
-    int i , j ,k , tmp;
+    int i , j , k , temp;
     for (k = num / 2; k > 0; k /= 2) {
         for (i = k; i < num; i++) {
-            tmp = arr[i];
+            temp = arr[i];
             for (j = i; j >= k; j -= k) {
-                if (arr[j - k] > tmp) {
+                if (arr[j - k] > temp) {
                     arr[j] = arr[j - k];
                 }else{
                     break;
                 }
             }
-            arr[j] = tmp;
+            arr[j] = temp;
         }
     }
 }
 
-void SelectSort(int arr[] ,int num)
+void SelectSort(int arr[] , int num)
 {
-    
-    
+    int i , j , Mindex;
+    for (i = 0; i < num; i++) {
+        Mindex = i;
+        for (j = i; j < num; j++) {
+            if (arr[j] < arr[Mindex]) {
+                Mindex = j;
+            }
+        }
+        swap1(&arr[i], &arr[Mindex]);
+    }
 }
 
 
