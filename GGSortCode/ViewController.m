@@ -16,15 +16,29 @@
 #import "GGSortCode-Swift.h"
 
 #import "GGSingleDoubleLink.h"
+#import "GGTwoVC.h"
+
 
 @interface ViewController ()
-
+@property (nonatomic , strong) GGTwoVC *twovc;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _twovc = [[GGTwoVC alloc] init];
+//    _twovc.delegate = self;
+    
+    
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    btn.frame = CGRectMake(50, 50, 100, 100);
+//    [btn setTitle:@"go" forState:UIControlStateNormal];
+//    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(gotwoVC) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:btn];
     
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -54,6 +68,14 @@
 //    imageView.image = image;
 //    [self.view addSubview:imageView];
 }
+
+- (void)gotwoVC
+{
+    
+    
+    [self.navigationController pushViewController:_twovc animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -76,30 +76,6 @@ Status CreateList(DLink **L, DLink **R, int *Elements, int n)
 }
 
 
-void createLink(DLink **L , DLink **R , int *Elements , int n)
-{
-    DLink *pre , *q;
-    int i;
-    unsigned long l = 0 , r = 0;
-    
-    (*L) = (DLink *)malloc(sizeof(DLink));
-    (*L)->data = Elements[0];
-    
-    pre = *L;
-    
-    for (i = 1; i < n; i++) {
-        q = (DLink *)malloc(sizeof(DLink));
-        q->data = Elements[i];
-        
-        pre->link = l ^ (unsigned long)q;
-        l = (unsigned long)pre;
-        pre = q;
-    }
-    
-    pre->link = (unsigned long) l ^ r;
-    (*R) = pre;
-    
-}
 
 
 
@@ -161,7 +137,25 @@ void dl(DLink *L)
 
 
 
-
+void createlink(DLink **L , DLink **R , int *elements , int n)
+{
+    DLink *p , *q = NULL ;
+    unsigned long l = 0 , r = 0;
+    int i = 0;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    p = (*L);
+    for (i = 1; i < n; i++) {
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^ (unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+}
 
 
 // Traverse from Left to Right
@@ -205,17 +199,378 @@ Status DispR(DLink *R)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void printLink(DLink *link)
+{
+    unsigned long l = 0, prior ;
+    DLink *p = link;
+    printf("%d ",p->data);
+    while (1) {
+        prior = l ^ p->link;
+        if (prior == 0) {
+            break;
+        }
+        l = (unsigned long)p;
+        p = (DLink *)prior;
+        printf("%d ",p->data);
+    }
+}
+
+
+
+void createLink2(DLink **L , DLink **R , int *elements ,int n)
+{
+    int i = 0 ;
+    unsigned long l = 0 , r = 0;
+    DLink *p = NULL , *q = NULL;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    p = (*L);
+    
+    for (i = 1; i < n; i++) {
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = (unsigned long)q ^ l;
+        l = (unsigned long) p;
+        p = q;
+    }
+    p->link = l ^r;
+    
+    (*R) = q;
+}
+
+
+
+
+
+
+
+
+void createLink3(DLink **L , DLink **R , int *elements , int n)
+{
+    DLink *p = NULL , *q = NULL;
+    unsigned long l = 0 , r = 0;
+    int i = 0;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    p = (*L);
+    for (i = 1; i < n; i++) {
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^ (unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+}
+
+void printLink3(DLink *L)
+{
+    unsigned long l = 0 , prior;
+    DLink *p = L;
+    printf("%d ",p->data);
+    while (p) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            break;
+        }
+        
+        l = (unsigned long)p;
+        p = (DLink *)prior;
+        
+        printf("%d ",p->data);
+    }
+    
+}
+
+
+
+
+void createLink34(DLink **L , DLink **R , int *elements , int n)
+{
+    DLink *p , *q = NULL;
+    unsigned long l = 0 , r = 0;
+    int i = 0;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    p = (*L);
+    
+    for (i = 1; i < n; i++) {
+        
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^ (unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+    
+}
+
+
+
+
+
+
+
+
+
+void createLink4(DLink **L , DLink **R , int *elements , int n)
+{
+    DLink *p = NULL , *q = NULL;
+    
+    int i = 0;
+    unsigned long l = 0, r = 0;
+    
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    
+    p = (*L);
+    for (i = 1; i < n; i++) {
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^(unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+    
+}
+
+
+
+
+void createLink5(DLink **L , DLink **R , int *elements , int n)
+{
+    DLink *p , *q = NULL;
+    int i = 0;
+    unsigned long l = 0 , r = 0;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    
+    p = (*L);
+    for (i = 1; i < n; i++){
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^ (unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+}
+
+
+
+
+
+
+
+
+
+
+
+void printLink4(DLink *L)
+{
+    unsigned long l = 0, prior = 0;
+    DLink *p = L;
+    printf("%d ",p->data);
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            break;
+        }
+        l = (unsigned long)p;
+        p = (DLink *)prior;
+        printf("%d ",p->data);
+    }
+    
+}
+
+
+
+
+void createLink8(DLink **L , DLink **R , int *elements,int n)
+{
+    DLink * p , *q = NULL;
+    unsigned long l = 0 , r = 0;
+    int i = 0;
+    (*L) = (DLink *)malloc(sizeof(DLink));
+    (*L)->data = elements[i];
+    
+    p = (*L);
+    for (i = 1; i < n; i++) {
+        q = (DLink *)malloc(sizeof(DLink));
+        q->data = elements[i];
+        
+        p->link = l ^ (unsigned long)q;
+        l = (unsigned long)p;
+        p = q;
+    }
+    q->link = l ^ r;
+    (*R) = q;
+}
+
+
+DLink * createNode61(int data)
+{
+    DLink *node = (DLink *)malloc(sizeof(DLink));
+    node->data = data;
+    node->link = 0;
+    return node;
+}
+
+
+
+DLink * addNode61(DLink **L , int data)
+{
+    DLink *p = (*L);
+    unsigned long l = 0 , prior = 0;
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            DLink *newNode = createNode61(data);
+            p->link = l ^ (unsigned long)newNode;
+            l = (unsigned long)p;
+            
+            newNode->link =  l ^ 0;
+            return newNode;
+            break;
+        }
+        l = (unsigned long)p;
+        p = (DLink *)prior;
+    }
+}
+
+
+
+
+
+
+
+typedef struct _Dlink1
+{
+    int data;
+    unsigned long link;
+}DLink1;
+
+DLink1 *createDLink5(int data)
+{
+    DLink1 *node = (DLink1 *)malloc(sizeof(DLink1));
+    node->data = data;
+    node->link = 0;
+    return node;
+}
+
+DLink1 *addDLink5(DLink1 **head, int data)
+{
+    DLink1 *p = *head;
+    unsigned long l = 0 , prior = 0;
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            DLink1 *node = createDLink5(data);
+            p->link = l ^ (unsigned long)node;
+            
+            l = (unsigned long)p;
+            node->link = l ^ 0;
+            
+            return node;
+        }
+        l = (unsigned long)p;
+        p = (DLink1 *)prior;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void printNode5(DLink1 *head)
+{
+
+    DLink1 *p = head;
+    unsigned long l = 0 ,prior = 0;
+    printf("%d ",p->data);
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            break;
+        }
+        l = (unsigned long) p;
+        p = (DLink1 *)prior;
+        printf("%d ",p->data);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 @implementation GGSingleDoubleLink
 + (void)startLink
 {
-    DLink *L, *R;
-    int Elements[] = {1, 2, 3, 4, 5};
-    createLink1(&L, &R, Elements, 5);
-    printf("Traverse from Left to Right: ");
-    dl(L);
+    DLink1 *head = createDLink5(10);
+//
+    addDLink5(&head, 8);
+    printNode5(head);
+    
+    
+    
+//    DLink *L, *R;
+//    int Elements[] = {1, 2, 3, 4, 5};
+//    createLink8(&L, &R, Elements, 5);
+//
+
+    
+//    DLink *header = createNode61(10);
+//    
+//    R = addNode61(&header, 9);
+//    R = addNode61(&header, 65);
+//    printf("Traverse from Left to Right: ");
+//    printLink4(header);
 //    printf("\n");
 //    printf("Traverse from Right to Left: ");
-//    DispR(R);
+//    printLink4(R);
 //    printf("\n");
 }
 @end

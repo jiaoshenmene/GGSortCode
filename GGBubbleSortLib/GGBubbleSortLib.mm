@@ -212,7 +212,11 @@ void BubbleSort16310(int arr[] , int n)
     }
 }
 
-void quickSort170316(int arr[] , int l , int r)
+
+
+
+
+void quickSort12(int arr[] , int l , int r)
 {
     if (l < r) {
         int i = l , j = r , temp = arr[i];
@@ -230,32 +234,14 @@ void quickSort170316(int arr[] , int l , int r)
             if (i < j) {
                 arr[j--] = arr[i];
             }
-            
         }
         arr[i] = temp;
-        
-        quickSort170316(arr, l, i - 1);
-        quickSort170316(arr, i + 1, r);
-        
+        quickSort12(arr, l, i - 1);
+        quickSort12(arr, i + 1, r);
     }
 }
 
-void shellSort170316(int arr[] , int n)
-{
-    int i , j , temp , increment;
-    for (increment = n / 2; increment > 0; increment /= 2) {
-        for (i = increment; i < n; i++) {
-            temp = arr[i];
-            for (j = i; j >= increment && arr[j - increment] > temp; j -= increment) {
-                arr[j] = arr[j - increment];
-            }
-            arr[j] = temp;
-        }
-    }
-    
-}
-
-void insertSort170316(int arr[] , int n)
+void insertSort(int arr[] , int n)
 {
     int i , j , temp;
     for (i = 1; i < n; i++) {
@@ -267,7 +253,7 @@ void insertSort170316(int arr[] , int n)
     }
 }
 
-void selectSort170316(int arr[] , int n)
+void selectSort(int arr[] , int n)
 {
     int i , j , mindex;
     for (i = 0; i < n; i++) {
@@ -278,202 +264,50 @@ void selectSort170316(int arr[] , int n)
             }
         }
         if (mindex != i) {
-            swap1(&arr[mindex], &arr[i]);
-        }
-    }
-}
-
-void bubbleSort170316(int arr[] , int n)
-{
-    int j , k , flag;
-    flag = n;
-    while (flag) {
-        k = flag;
-        flag = 0;
-        for (j = 1; j < n ; j++) {
-            if (arr[j - 1] > arr[j]) {
-                swap1(&arr[j], &arr[j - 1]);
-                flag = j;
-            }
-        }
-    }
-}
-
-void quickSort17317(int arr[], int l , int r)
-{
-    if (l < r) {
-        int i = l , j = r , temp = arr[i];
-        while (i < j) {
-            while (i < j && temp < arr[j]) {
-                j--;
-            }
-            if (i < j) {
-                arr[i++] = arr[j];
-            }
-            
-            while (i < j && temp > arr[i]) {
-                i++;
-            }
-            if (i < j) {
-                arr[j--] = arr[i];
-            }
-        }
-        
-        arr[i] = temp;
-        quickSort17317(arr, l, i - 1);
-        quickSort17317(arr, i + 1, r);
-    }
-}
-
-void insertSort17317(int arr[] , int n)
-{
-    int i , j ,temp;
-    for (i = 1; i < n; i++) {
-        temp = arr[i];
-        for (j = i; j > 0 && arr[j - 1] > temp ; j--) {
-            arr[j] = arr[j - 1];
-        }
-        arr[j] = temp;
-    }
-}
-
-void selectSort17317(int arr[] , int n)
-{
-    int i , j , mindex;
-    for (i = 0; i < n ; i++) {
-        mindex = i;
-        for (j = i + 1; j < n ; j++) {
-            if (arr[j] < arr[mindex]) {
-                mindex = j;
-            }
-        }
-        if (mindex != i) {
             swap1(&arr[i], &arr[mindex]);
         }
     }
 }
 
-void shellSort17317(int arr[] , int n)
+void shellSort(int arr[] , int n)
 {
-    int i , j , increment , temp;
+    int i , j , increment ,temp;
     for (increment = n / 2; increment > 0; increment /= 2) {
-        for (i = increment ; i < n; i++) {
+        for (i = increment; i < n; i++) {
             temp = arr[i];
-            for (j = i; j >= increment && arr[j - increment] > temp; j -=increment) {
-                arr[j] = arr[j - increment];
+            for (j = i; j >= increment && arr[j - increment] > temp; j -= increment) {
+                arr[j] = arr[j -increment];
             }
             arr[j] = temp;
         }
     }
 }
 
-void BubbleSort17317(int arr[] , int n)
+void bubbleSort(int arr[] , int n)
 {
-    int j , k , flag;
+    int j , flag , k ;
     flag = n;
     while (flag) {
         k = flag;
         flag = 0;
         for (j = 1; j < k; j++) {
-            if (arr[j - 1] > arr[j]) {
-                swap1(&arr[j - 1], &arr[j]);
-                flag = j;
-            }
-        }
-    }
-}
-
-
-void quickSort1(int arr[] , int l , int r)
-{
-    if (l < r) {
-        int i = l , j = r , temp = arr[i];
-        while (i < j) {
-            while (i < j && temp < arr[j]) {
-                j--;
-            }
-            if (i < j) {
-                arr[i++] = arr[j];
-            }
-            
-            while (i < j && temp > arr[i]) {
-                i++;
-            }
-            if (i < j) {
-                arr[j--] = arr[i];
-            }
-        }
-        arr[i] = temp;
-        quickSort1(arr, l, i - 1);
-        quickSort1(arr, i + 1, r);
-    }
-}
-
-void insertSort1(int arr[] , int n)
-{
-    int i , j , temp;
-    for (i = 1; i < n; i++) {
-        temp = arr[i];
-        for (j = i ; j > 0 &&arr[j - 1] > temp; j--) {
-            arr[j] = arr[j - 1];
-        }
-        arr[j] = temp;
-    }
-}
-
-void selectSort1(int arr[] , int n)
-{
-    int i , j , mindex;
-    for (i = 0; i < n; i++) {
-        mindex = i;
-        for (j = i + 1; j < n; j++) {
-            if (arr[j] < arr[mindex]) {
-                mindex = j;
-            }
-        }
-        if (i != mindex) {
-            swap1(&arr[i], &arr[mindex]);
-        }
-    }
-}
-
-void shellSort1(int arr[] , int n)
-{
-    int i , j , increment , temp;
-    for (increment = n / 2; increment > 0; increment /= 2) {
-        for (i = increment; i < n; i++) {
-            temp = arr[i];
-            for (j = i; j >= increment && arr[j - increment] > temp; j -= increment) {
-                arr[j] = arr[j - increment];
-            }
-            arr[j] = temp;
-        }
-    }
-}
-
-void bubbleSort1(int arr[] , int n)
-{
-    int j , k , flag;
-    flag = n;
-    while (flag) {
-        k = flag;
-        flag = 0;
-        for (j = 1; j < n; j++) {
-            if (arr[j - 1]>arr[j]) {
+            if (arr[j] < arr[j - 1]) {
                 swap1(&arr[j], &arr[j - 1]);
-                flag = j;
+                flag =  j;
             }
         }
     }
 }
+
+
 
 
 @implementation GGBubbleSortLib
 + (void)startTest
 {
     int arr[] = {25,24,1,14,3,9,13};
-    quickSort1(arr,0 , 6);
-//    bubbleSort1(arr, 7);
+//    quickSort12(arr,0 , 6);
+    bubbleSort(arr, 7);
     for (int i = 0; i < 7; i++) {
         printf("%d,",arr[i]);
     }

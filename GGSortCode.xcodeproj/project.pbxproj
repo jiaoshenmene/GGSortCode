@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10CDC671E8263370097B61D /* GGTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10CDC661E8263370097B61D /* GGTwoVC.m */; };
+		A10CDC6A1E8267680097B61D /* GGThreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10CDC691E8267680097B61D /* GGThreeVC.m */; };
 		A1346B241E7AB44C00426D27 /* GGSingleDoubleLink.m in Sources */ = {isa = PBXBuildFile; fileRef = A1346B231E7AB44C00426D27 /* GGSingleDoubleLink.m */; };
 		A1346B251E7AB45200426D27 /* GGSingleDoubleLink.m in Sources */ = {isa = PBXBuildFile; fileRef = A1346B231E7AB44C00426D27 /* GGSingleDoubleLink.m */; };
 		A16CCC6E1D1FB91E009E0E73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A16CCC6D1D1FB91E009E0E73 /* main.m */; };
@@ -111,6 +113,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A10CDC651E8263370097B61D /* GGTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTwoVC.h; sourceTree = "<group>"; };
+		A10CDC661E8263370097B61D /* GGTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTwoVC.m; sourceTree = "<group>"; };
+		A10CDC681E8267680097B61D /* GGThreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGThreeVC.h; sourceTree = "<group>"; };
+		A10CDC691E8267680097B61D /* GGThreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGThreeVC.m; sourceTree = "<group>"; };
 		A1346B221E7AB44C00426D27 /* GGSingleDoubleLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGSingleDoubleLink.h; sourceTree = "<group>"; };
 		A1346B231E7AB44C00426D27 /* GGSingleDoubleLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGSingleDoubleLink.m; sourceTree = "<group>"; };
 		A16CCC691D1FB91E009E0E73 /* GGSortCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGSortCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +249,10 @@
 				A16CCC701D1FB91E009E0E73 /* AppDelegate.m */,
 				A16CCC721D1FB91E009E0E73 /* ViewController.h */,
 				A16CCC731D1FB91E009E0E73 /* ViewController.m */,
+				A10CDC651E8263370097B61D /* GGTwoVC.h */,
+				A10CDC661E8263370097B61D /* GGTwoVC.m */,
+				A10CDC681E8267680097B61D /* GGThreeVC.h */,
+				A10CDC691E8267680097B61D /* GGThreeVC.m */,
 				A1B3F63A1E726045003E83B6 /* LeetCodeSort.swift */,
 				A1AA89031D9A11B5009521CF /* 26function_press@2x.png */,
 				A18C50C31D9A4E2E00A53799 /* jg0.png */,
@@ -587,9 +597,11 @@
 				A16CCC741D1FB91E009E0E73 /* ViewController.m in Sources */,
 				A16CCCCF1D1FBB8F009E0E73 /* GGBubbleSortLib.mm in Sources */,
 				A1346B251E7AB45200426D27 /* GGSingleDoubleLink.m in Sources */,
+				A10CDC671E8263370097B61D /* GGTwoVC.m in Sources */,
 				A16CCC711D1FB91E009E0E73 /* AppDelegate.m in Sources */,
 				A1B591631D7FB6CB00BFA690 /* NSString+Utility.m in Sources */,
 				A1B591641D7FB73A00BFA690 /* StringStudy.m in Sources */,
+				A10CDC6A1E8267680097B61D /* GGThreeVC.m in Sources */,
 				A17BB8A21E52FC9D008D8AC3 /* GGLinkNode.m in Sources */,
 				A16CCC6E1D1FB91E009E0E73 /* main.m in Sources */,
 			);
@@ -786,6 +798,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GGSortCode/PTFakeTouch",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = GGSortCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGSortCode;
@@ -802,6 +821,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GGSortCode/PTFakeTouch",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = GGSortCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sogou.GGSortCode;
