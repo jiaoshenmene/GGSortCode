@@ -489,21 +489,83 @@ void reverse33(MLinkNode3 **head)
     }
 }
 
+typedef struct _M1LinkNode
+{
+    int data;
+    struct _M1LinkNode *next;
+}M1LinkNode;
+
+M1LinkNode *createM1Node(int data)
+{
+    M1LinkNode *node = (M1LinkNode *)malloc(sizeof(M1LinkNode));
+    node->data = data;
+    node->next = NULL;
+    return node;
+}
+
+
+void _addM1Node(M1LinkNode **head , int data)
+{
+    if ((*head)->next == NULL) {
+        M1LinkNode *node = createM1Node(data);
+        (*head)->next = node;
+        return;
+    }
+    _addM1Node(&((*head)->next), data);
+}
+
+void addM1Node(M1LinkNode **head, int data)
+{
+    _addM1Node(head, data);
+}
+
+void printM1Node(M1LinkNode *head)
+{
+    M1LinkNode *p = head;
+    while (p) {
+        printf("%d ",p->data);
+        p = p->next;
+    }
+}
+
+void reverseM1(M1LinkNode **head)
+{
+    M1LinkNode *p = (*head);
+    M1LinkNode *pre = NULL;
+    while (p) {
+        (*head) = p;
+        M1LinkNode *tmp = p->next;
+        p->next = pre;
+        pre = p;
+        p = tmp;
+    }
+    
+}
+
 @implementation GGLinkNode
 
 +(void)startLink
 {
-    MLinkNode3 *node3 = createNode3(8);
-    addNode3(&node3, 3);
+    M1LinkNode *n = createM1Node(7);
     
-    addNode3(&node3, 9);
+    addM1Node(&n, 6);
+    addM1Node(&n, 9);
+    printM1Node(n);
     
-    addNode3(&node3, 1);
-    printNode3(node3);
+    reverseM1(&n);
+    printM1Node(n);
     
-    printf("\n");
-    reverse33(&node3);
-    printNode3(node3);
+//    MLinkNode3 *node3 = createNode3(8);
+//    addNode3(&node3, 3);
+//    
+//    addNode3(&node3, 9);
+//    
+//    addNode3(&node3, 1);
+//    printNode3(node3);
+//    
+//    printf("\n");
+//    reverse33(&node3);
+//    printNode3(node3);
     
 //    MLinkNode2 *node = createLinkNode2(8);
 //    addNode2(&node, 9);

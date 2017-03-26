@@ -540,8 +540,25 @@ void printNode5(DLink1 *head)
 
 
 
+typedef struct _M1link1
+{
+    int data;
+    unsigned long link;
+}M1link1;
 
 
+M1link1 *createNode(int data)
+{
+    M1link1 *node = (M1link1 *)malloc(sizeof(M1link1));
+    node->data = data;
+    node->link = 0;
+    return node;
+}
+
+//M1link1 *add1Node(M1link1 **head , int data)
+//{
+//    
+//}
 
 
 
