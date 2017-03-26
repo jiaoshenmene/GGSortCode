@@ -555,58 +555,72 @@ M1link1 *createM1Link(int data)
     return node;
 }
 
-inline M1link1 *addM1Node(M1link1 **head , int data)
+inline M1link1 *addM1Node(M1link1 **L , int data)
 {
     
-//    M1link1 *p = (*head);
-//    unsigned long l = 0 , prior = 0;
-//    while (1) {
-//        prior = p->link ^ l;
-//        if (prior == 0) {
-//            M1link1 *newNode = createM1Link(data);
-//            p->link = l ^ (unsigned long)newNode;
-//            l = (unsigned long)p;
-//            
-//            newNode->link =  l ^ 0;
-//            return newNode;
-//            break;
-//        }
-//        l = (unsigned long)p;
-//        p = (M1link1 *)prior;
-//    }
-    
-    
-    M1link1 *p = (*head) ;
+    M1link1 *p = (*L);
     unsigned long l = 0 , prior = 0;
     while (1) {
         prior = p->link ^ l;
         if (prior == 0) {
-            M1link1 *node = createM1Link(data);
-            p->link = l ^ (unsigned long)node;
+            M1link1 *newNode = createM1Link(data);//createNode61(data);
+            p->link = l ^ (unsigned long)newNode;
             l = (unsigned long)p;
-            node->link = l ^ 0;
-            return node;
+            
+            newNode->link =  l ^ 0;
+            return newNode;
+            break;
         }
         l = (unsigned long)p;
         p = (M1link1 *)prior;
     }
+
+    
+    
+//    M1link1 *p = (*head) ;
+//    unsigned long l = 0 , prior = 0;
+//    while (1) {
+//        prior = p->link ^ l;
+//        if (prior == 0) {
+//            M1link1 *node = createM1Link(data);
+//            p->link = l ^ (unsigned long)node;
+//            l = (unsigned long)p;
+//            node->link = l ^ 0;
+//            return node;
+//        }
+//        l = (unsigned long)p;
+//        p = (M1link1 *)prior;
+//    }
 }
 
 
-inline void printM1Node(M1link1 *head)
+ void printM11Node(M1link1 *head)
 {
+    unsigned long l = 0, prior = 0;
     M1link1 *p = head;
-    unsigned long l = 0 , prior = 0;
     printf("%d ",p->data);
     while (1) {
         prior = p->link ^ l;
         if (prior == 0) {
             break;
         }
-        l = (unsigned long) p;
+        l = (unsigned long)p;
         p = (M1link1 *)prior;
         printf("%d ",p->data);
     }
+    
+//    M1link1 *p = head;
+//    unsigned long l = 0 , prior = 0;
+//    printf("%d ",p->data);
+//    while (1) {
+//        prior = p->link ^ l;
+//        if (prior == 0) {
+//            break;
+//        }
+//        l = (unsigned long) p;
+//        p = (M1link1 *)prior;
+//        printf("%d ",p->data);
+//    }
 }
 
 @implementation GGSingleDoubleLink
@@ -617,8 +631,8 @@ inline void printM1Node(M1link1 *head)
     r = addM1Node(&h1, 9);
     r = addM1Node(&h1, 4);
     
-    printM1Node(h1);
-    printM1Node(r);
+    printM11Node(h1);
+    printM11Node(r);
     
 //    DLink1 *head = createDLink5(10);
 ////
