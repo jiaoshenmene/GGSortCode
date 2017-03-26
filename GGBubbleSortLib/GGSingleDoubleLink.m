@@ -547,7 +547,7 @@ typedef struct _M1link1
 }M1link1;
 
 
-M1link1 *createNode(int data)
+M1link1 *createM1Link(int data)
 {
     M1link1 *node = (M1link1 *)malloc(sizeof(M1link1));
     node->data = data;
@@ -555,39 +555,93 @@ M1link1 *createNode(int data)
     return node;
 }
 
-//M1link1 *add1Node(M1link1 **head , int data)
-//{
-//    
-//}
+inline M1link1 *addM1Node(M1link1 **head , int data)
+{
+    
+//    M1link1 *p = (*head);
+//    unsigned long l = 0 , prior = 0;
+//    while (1) {
+//        prior = p->link ^ l;
+//        if (prior == 0) {
+//            M1link1 *newNode = createM1Link(data);
+//            p->link = l ^ (unsigned long)newNode;
+//            l = (unsigned long)p;
+//            
+//            newNode->link =  l ^ 0;
+//            return newNode;
+//            break;
+//        }
+//        l = (unsigned long)p;
+//        p = (M1link1 *)prior;
+//    }
+    
+    
+    M1link1 *p = (*head) ;
+    unsigned long l = 0 , prior = 0;
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            M1link1 *node = createM1Link(data);
+            p->link = l ^ (unsigned long)node;
+            l = (unsigned long)p;
+            node->link = l ^ 0;
+            return node;
+        }
+        l = (unsigned long)p;
+        p = (M1link1 *)prior;
+    }
+}
 
 
-
+inline void printM1Node(M1link1 *head)
+{
+    M1link1 *p = head;
+    unsigned long l = 0 , prior = 0;
+    printf("%d ",p->data);
+    while (1) {
+        prior = p->link ^ l;
+        if (prior == 0) {
+            break;
+        }
+        l = (unsigned long) p;
+        p = (M1link1 *)prior;
+        printf("%d ",p->data);
+    }
+}
 
 @implementation GGSingleDoubleLink
 + (void)startLink
 {
-    DLink1 *head = createDLink5(10);
-//
-    addDLink5(&head, 8);
-    printNode5(head);
+    M1link1 *r = NULL;
+    M1link1 *h1 = createM1Link(10);
+    r = addM1Node(&h1, 9);
+    r = addM1Node(&h1, 4);
+    
+    printM1Node(h1);
+    printM1Node(r);
+    
+//    DLink1 *head = createDLink5(10);
+////
+//    addDLink5(&head, 8);
+//    printNode5(head);
     
     
     
-//    DLink *L, *R;
+    DLink *L, *R;
 //    int Elements[] = {1, 2, 3, 4, 5};
 //    createLink8(&L, &R, Elements, 5);
 //
 
     
-//    DLink *header = createNode61(10);
-//    
-//    R = addNode61(&header, 9);
-//    R = addNode61(&header, 65);
-//    printf("Traverse from Left to Right: ");
-//    printLink4(header);
-//    printf("\n");
+    DLink *header = createNode61(10);
+    
+    R = addNode61(&header, 9);
+    R = addNode61(&header, 65);
+    printf("Traverse from Left to Right: ");
+    printLink4(header);
+    printf("\n");
 //    printf("Traverse from Right to Left: ");
-//    printLink4(R);
-//    printf("\n");
+    printLink4(R);
+    printf("\n");
 }
 @end

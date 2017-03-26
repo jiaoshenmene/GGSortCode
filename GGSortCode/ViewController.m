@@ -48,11 +48,11 @@
 //    [LeetCodeSort example];
 //    [GGBubbleSortLib startTest];
     
-    [GGLinkNode startLink];
+//    [GGLinkNode startLink];
     
 //    [GGDoubleLink startLink];
     
-//    [GGSingleDoubleLink startLink];
+    [GGSingleDoubleLink startLink];
 //    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 //        NSLog(@"=================1");
 //        dispatch_sync(dispatch_get_main_queue(), ^{
